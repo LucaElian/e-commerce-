@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS usuarios(
+    id INT(8) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nombre VARCHAR(30),
+    username VARCHAR(30),
+    password VARCHAR(30)
+);
+
+CREATE TABLE IF NOT EXISTS videojuegos(
+    id INT(16) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    categoria VARCHAR(20) NOT NULL,
+    precio INT(8) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS favoritos(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    user_id INT(8) NOT NULL,
+    videojuegos_id INT(16) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id),
+    FOREIGN KEY (videojuegos_id) REFERENCES videojuegos(id)
+);
+
+CREATE TABLE IF NOT EXISTS comprados(
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    user_id INT(8) NOT NULL,
+    videojuegos_id INT(16) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id),
+    FOREIGN KEY (videojuegos_id) REFERENCES videojuegos(id)
+);

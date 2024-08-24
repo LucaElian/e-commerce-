@@ -1,6 +1,7 @@
-from os import system, path
+from os import path
 import sqlite3
 import subprocess
+import json
 
 try:
     from PIL import Image
@@ -15,4 +16,6 @@ except ImportError:
 # Clases
 from tienda_principal import Tienda
 from usuario import Usuario
+#from users_file.session import Session
+import crear_base_datos
 

@@ -5,8 +5,7 @@ class Usuario(ctk.CTkToplevel):
         super().__init__(*args, **kwargs)
         x = (self.winfo_screenwidth() // 2) - (474 // 2)
         y = (self.winfo_screenheight() // 2) - (606 // 2)
-        self.geometry(f"474x606+{x}+{y}") #
-        self.title("LOGIN")
+        self.geometry(f"474x606+{x}+{y}")
         self.iniciar_widgets()
 
     def iniciar_widgets(self):
@@ -36,7 +35,7 @@ class Usuario(ctk.CTkToplevel):
         self.password_entry = ctk.CTkEntry(self.opciones_usuario, border_color=("#FF3936","#670010"), text_color=("#000000","#FFFFFF"), fg_color=("#BFBFBF","#2B2B2B"), corner_radius=30, height=35, width=300, font=("Proxima Soft", 15))
         self.forget_password = ctk.CTkButton(self.opciones_usuario, text="Forgot password?", text_color=("#000000","#FFFFFF"), font=("Proxima Soft", 12), fg_color="transparent", width=0, hover="disable", cursor="hand2")
 
-        self.enter_usuario = ctk.CTkButton(self.opciones_usuario, border_width=2, fg_color="transparent", border_color=("#FF3936","#670010"), hover_color=("#FF7673","#4A0010"), font=("Proxima Soft", 12), corner_radius=30, height=35, width=300, text="LOGIN", cursor="hand2")
+        self.enter_usuario = ctk.CTkButton(self.opciones_usuario, border_width=2, fg_color="transparent", border_color=("#FF3936","#670010"), hover_color=("#FF7673","#4A0010"), font=("Proxima Soft", 12), corner_radius=30, height=35, width=300, text="LOGIN", text_color=("#000000","#FFFFFF"), cursor="hand2")
 
         self.login_configs()
 
@@ -57,6 +56,7 @@ class Usuario(ctk.CTkToplevel):
             self.uno = 1
 
     def login_configs(self):
+            self.title("LOGIN")
             if self.uno == 0:
                 self.name_usuario.place_forget()
                 self.name_entry.place_forget()
@@ -71,6 +71,7 @@ class Usuario(ctk.CTkToplevel):
             self.enter_usuario.place(relx=0.5, rely=0.85, anchor="center")
 
     def register_configs(self):
+            self.title("REGISTER")
             self.forget_password.place_forget()
             self.name_entry.delete(0, "end")
             self.username_entry.delete(0, "end")

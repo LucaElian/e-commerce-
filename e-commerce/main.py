@@ -39,7 +39,7 @@ class Juegos(ctk.CTk):
                                 image=foto_user_img, text="INICIAR SESIÓN", 
                                 corner_radius=10, border_width=2, border_spacing=0, 
                                 border_color=("#FF3936","#670010"), width=0, 
-                                hover_color=("#FF7673","#4A0010"), font=("Roboto", 12), 
+                                hover_color=("#FF7673","#4A0010"), font=("Proxima Soft", 12), 
                                 cursor="hand2", command=lambda: abrir_usuarios(self))
         foto_user.place(relx=0.94, rely=0.5, anchor="center")
 
@@ -51,16 +51,16 @@ class Juegos(ctk.CTk):
         texto_carrito.place(relx=0.7053 if int(texto_carrito.cget("text")) <= 10 else 0.70536, rely=0.29, anchor="center")
         
         # Opciones botones
-        destacados_boton = ctk.CTkButton(header2, text="JUEGOS DESTACADOS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2")
+        destacados_boton = ctk.CTkButton(header2, text="JUEGOS DESTACADOS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2", font=("Proxima Soft", 12))
         destacados_boton.place(relx=0.14, rely=0.6, anchor="center")
         
-        categorias_boton = ctk.CTkButton(header2, text="CATEGORIAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2")
+        categorias_boton = ctk.CTkButton(header2, text="CATEGORIAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2", font=("Proxima Soft", 12))
         categorias_boton.place(relx=0.39, rely=0.6, anchor="center")
 
-        promos_ofertas_boton = ctk.CTkButton(header2, text="PROMOS/OFERTAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2")
+        promos_ofertas_boton = ctk.CTkButton(header2, text="PROMOS/OFERTAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2", font=("Proxima Soft", 12))
         promos_ofertas_boton.place(relx=0.64, rely=0.6, anchor="center")
 
-        consolas_boton = ctk.CTkButton(header2, text="CONSOLAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2")
+        consolas_boton = ctk.CTkButton(header2, text="CONSOLAS", fg_color="transparent", width=0, text_color=("#000000","#FFFFFF"), hover="disable", cursor="hand2", font=("Proxima Soft", 12))
         consolas_boton.place(relx=0.89, rely=0.6, anchor="center")
 
         values = ["value 1", "value 2", "value 3", "value 4", "value 1", "value 2", "value 3", "value 4"]
